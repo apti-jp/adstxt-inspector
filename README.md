@@ -9,7 +9,6 @@ A Chrome extension for validating and analyzing Ads.txt, App-ads.txt files and t
 The extension consists of three main components:
 
 1. **Background Service Worker**
-
    - Monitors active tabs and fetches Ads.txt/App-ads.txt/Sellers.json
    - Stores scan results in Chrome Storage
    - Handles restricted URL patterns
@@ -38,10 +37,10 @@ The extension consists of three main components:
 
 ### Analysis Features
 
-  - DIRECT/RESELLER relationship ratio
-  - Seller type distribution (PUBLISHER/INTERMEDIARY/BOTH)
-  - Validation rate assessment
-  - Cross-validation of Ads.txt/App-ads.txt and Sellers.json entries
+- DIRECT/RESELLER relationship ratio
+- Seller type distribution (PUBLISHER/INTERMEDIARY/BOTH)
+- Validation rate assessment
+- Cross-validation of Ads.txt/App-ads.txt and Sellers.json entries
 
 ### Reporting Features
 
