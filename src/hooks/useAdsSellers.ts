@@ -149,25 +149,27 @@ export const useAdsSellers = (): UseAdsSellersReturn => {
       const sellersJsonProvider: SellersJsonProvider = {
         async batchGetSellers(domain: string, sellerIds: string[]): Promise<BatchSellersResult> {
           // Use fetchSellersParallel but for a single domain which handles caching and concurrency
-          const requests = sellerIds.map(id => ({ domain, sellerId: id }));
+          const requests = sellerIds.map((id) => ({ domain, sellerId: id }));
           const results = await SellersJsonFetcher.fetchSellersParallel(requests);
 
           // Map back to BatchSellersResult format
-          const sellers = results.map(r => ({
+          const sellers = results.map((r) => ({
             sellerId: r.sellerId,
-            seller: r.seller ? {
-              seller_id: r.seller.seller_id,
-              seller_type: r.seller.seller_type,
-              name: r.seller.name,
-              domain: r.seller.domain,
-              is_confidential: (r.seller.is_confidential ? 1 : 0) as 0 | 1,
-            } : null,
+            seller: r.seller
+              ? {
+                  seller_id: r.seller.seller_id,
+                  seller_type: r.seller.seller_type,
+                  name: r.seller.name,
+                  domain: r.seller.domain,
+                  is_confidential: (r.seller.is_confidential ? 1 : 0) as 0 | 1,
+                }
+              : null,
             found: !!r.seller,
             source: 'fresh' as const,
-            error: r.error
+            error: r.error,
           }));
 
-          const foundCount = sellers.filter(s => s.found).length;
+          const foundCount = sellers.filter((s) => s.found).length;
 
           return {
             domain,
@@ -175,7 +177,7 @@ export const useAdsSellers = (): UseAdsSellersReturn => {
             found_count: foundCount,
             results: sellers,
             metadata: {},
-            cache: { is_cached: false, status: 'success' }
+            cache: { is_cached: false, status: 'success' },
           };
         },
         async hasSellerJson(domain: string): Promise<boolean> {

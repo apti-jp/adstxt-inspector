@@ -53,7 +53,9 @@ module.exports = {
       chunks: ['sidepanel'],
     }),
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || (isProduction ? 'production' : 'development')),
+      'process.env.NODE_ENV': JSON.stringify(
+        process.env.NODE_ENV || (isProduction ? 'production' : 'development')
+      ),
       __DEV_BUILD__: JSON.stringify(!isProduction),
     }),
     // Generate manifest.json with environment-specific settings
@@ -67,20 +69,20 @@ module.exports = {
             manifest.web_accessible_resources = [
               {
                 resources: ['config/dev.json'],
-                matches: ['<all_urls>']
-              }
+                matches: ['<all_urls>'],
+              },
             ];
           }
 
           const manifestString = JSON.stringify(manifest, null, 2);
           compilation.assets['manifest.json'] = {
             source: () => manifestString,
-            size: () => manifestString.length
+            size: () => manifestString.length,
           };
 
           callback();
         });
-      }
+      },
     },
   ],
   optimization: {

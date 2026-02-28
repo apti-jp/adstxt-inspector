@@ -200,7 +200,10 @@ export class SellersJsonFetcher {
         }
 
         // Handle HTTP 404 or other client errors by caching them
-        if (error instanceof Error && (error.message.includes('HTTP 40') || error.message.includes('404'))) {
+        if (
+          error instanceof Error &&
+          (error.message.includes('HTTP 40') || error.message.includes('404'))
+        ) {
           await SellersJsonCache.set(domain, { error: error.message, isInvalid: true });
           break;
         }
@@ -278,7 +281,7 @@ export class SellersJsonFetcher {
       const sellerIds = domainGroups.get(domain)!;
 
       if (result.error || !result.data) {
-        sellerIds.forEach(id => {
+        sellerIds.forEach((id) => {
           results.push({
             domain,
             sellerId: id,
@@ -291,9 +294,9 @@ export class SellersJsonFetcher {
       }
 
       const sellerMap = new Map<string, Seller>();
-      result.data.sellers.forEach(s => sellerMap.set(s.seller_id, s));
+      result.data.sellers.forEach((s) => sellerMap.set(s.seller_id, s));
 
-      sellerIds.forEach(id => {
+      sellerIds.forEach((id) => {
         results.push({
           domain,
           sellerId: id,

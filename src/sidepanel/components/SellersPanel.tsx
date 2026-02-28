@@ -85,9 +85,11 @@ export const SellersPanel: React.FC<SellersPanelProps> = ({
               // Search filter - use deferred value
               const matchesSearch = deferredSearchTerm
                 ? seller.name?.toLowerCase().includes(deferredSearchTerm.toLowerCase()) ||
-                String(seller.seller_id)?.toLowerCase().includes(deferredSearchTerm.toLowerCase()) ||
-                seller.domain?.toLowerCase().includes(deferredSearchTerm.toLowerCase()) ||
-                seller.comment?.toLowerCase().includes(deferredSearchTerm.toLowerCase())
+                  String(seller.seller_id)
+                    ?.toLowerCase()
+                    .includes(deferredSearchTerm.toLowerCase()) ||
+                  seller.domain?.toLowerCase().includes(deferredSearchTerm.toLowerCase()) ||
+                  seller.comment?.toLowerCase().includes(deferredSearchTerm.toLowerCase())
                 : true;
 
               // Seller type filter
@@ -281,14 +283,15 @@ export const SellersPanel: React.FC<SellersPanelProps> = ({
                       return (
                         <div
                           key={`${seller.seller_id}-${index}`}
-                          className={`entry-card ${validity?.isVerified
-                            ? 'border-green-200 bg-green-50'
-                            : validity?.reasons?.some((reason) => reason.key.startsWith('error_'))
-                              ? 'border-red-200 bg-red-50'
-                              : validity?.reasons && validity.reasons.length > 0
-                                ? 'border-yellow-200 bg-yellow-50'
-                                : ''
-                            }`}
+                          className={`entry-card ${
+                            validity?.isVerified
+                              ? 'border-green-200 bg-green-50'
+                              : validity?.reasons?.some((reason) => reason.key.startsWith('error_'))
+                                ? 'border-red-200 bg-red-50'
+                                : validity?.reasons && validity.reasons.length > 0
+                                  ? 'border-yellow-200 bg-yellow-50'
+                                  : ''
+                          }`}
                         >
                           <div className="entry-card-content">
                             <div className="entry-card-header">
@@ -311,12 +314,13 @@ export const SellersPanel: React.FC<SellersPanelProps> = ({
                                     }
                                   >
                                     <span
-                                      className={`tag ${['PUBLISHER', 'BOTH'].includes(
-                                        seller.seller_type.toUpperCase()
-                                      )
-                                        ? 'tag-blue'
-                                        : 'tag-gray'
-                                        }`}
+                                      className={`tag ${
+                                        ['PUBLISHER', 'BOTH'].includes(
+                                          seller.seller_type.toUpperCase()
+                                        )
+                                          ? 'tag-blue'
+                                          : 'tag-gray'
+                                      }`}
                                     >
                                       {seller.seller_type.toUpperCase()}
                                     </span>

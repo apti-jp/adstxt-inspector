@@ -89,10 +89,10 @@ export const AdsTxtPanel: React.FC<AdsTxtPanelProps> = ({
           // Search filter - use deferred value
           const matchesSearch = deferredSearchTerm
             ? entry.publisherId.toLowerCase().includes(deferredSearchTerm.toLowerCase()) ||
-            entry.domain.toLowerCase().includes(deferredSearchTerm.toLowerCase()) ||
-            (entry.certificationAuthorityId || '')
-              .toLowerCase()
-              .includes(deferredSearchTerm.toLowerCase())
+              entry.domain.toLowerCase().includes(deferredSearchTerm.toLowerCase()) ||
+              (entry.certificationAuthorityId || '')
+                .toLowerCase()
+                .includes(deferredSearchTerm.toLowerCase())
             : true;
 
           // Relationship filter
@@ -341,12 +341,13 @@ export const AdsTxtPanel: React.FC<AdsTxtPanelProps> = ({
                 return (
                   <div
                     key={`${domain}-${index}`}
-                    className={`entry-card ${validity.isVerified
-                      ? 'border-green-200 bg-green-50'
-                      : validity.reasons.some((reason) => reason.key.startsWith('error_'))
-                        ? 'border-red-200 bg-red-50'
-                        : 'border-yellow-200 bg-yellow-50'
-                      }`}
+                    className={`entry-card ${
+                      validity.isVerified
+                        ? 'border-green-200 bg-green-50'
+                        : validity.reasons.some((reason) => reason.key.startsWith('error_'))
+                          ? 'border-red-200 bg-red-50'
+                          : 'border-yellow-200 bg-yellow-50'
+                    }`}
                   >
                     <div className="entry-card-content">
                       <div className="entry-card-header">
@@ -367,8 +368,9 @@ export const AdsTxtPanel: React.FC<AdsTxtPanelProps> = ({
                             }
                           >
                             <span
-                              className={`tag ${entry.relationship === 'DIRECT' ? 'tag-blue' : 'tag-gray'
-                                }`}
+                              className={`tag ${
+                                entry.relationship === 'DIRECT' ? 'tag-blue' : 'tag-gray'
+                              }`}
                             >
                               {entry.relationship}
                             </span>

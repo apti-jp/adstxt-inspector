@@ -38,12 +38,10 @@ The SupplyChain Object (often abbreviated as "schain") is a technical standard d
 ### The Key Players
 
 1. **Publishers**: Owners of websites and apps where ads appear
-
    - They create the content that attracts visitors
    - They have ad spaces to sell (inventory)
 
 2. **SSPs / Exchanges**: Supply-Side Platforms and Ad Exchanges
-
    - Help publishers sell their ad inventory
    - Connect publishers to multiple potential buyers
    - Example: Google Ad Manager, Xandr, Magnite
@@ -163,13 +161,11 @@ This means:
 ## What Publishers Need to Do
 
 1. **Maintain Accurate Ads.txt/App-ads.txt Files**
-
    - List all authorized selling partners
    - Specify correct relationships (DIRECT or RESELLER)
    - Update promptly when partnerships change
 
 2. **Verify SupplyChain Information**
-
    - Work with partners who properly implement supply chain transparency
    - Ensure your inventory is properly identified throughout the chain
 
@@ -181,13 +177,11 @@ This means:
 ## What SSPs/Exchanges Need to Do
 
 1. **Maintain Accurate Sellers.json Files**
-
    - List all publishers and resellers in your system
    - Include correct identification information
    - Update when publisher relationships change
 
 2. **Implement SupplyChain Support**
-
    - Properly pass supply chain information in bid requests
    - Ensure seller IDs match between systems
    - Maintain connection between Ads.txt/App-ads.txt and sellers.json information
