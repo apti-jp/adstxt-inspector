@@ -113,7 +113,7 @@ AdsTxt Inspector supports both website and mobile application advertising transp
 ## Installation
 
 1. Download the latest release file (adstxt-inspector-build.zip
-   ) from the [Releases](https://github.com/miyaichi/adstxt-Inspector/releases/tag/latest-build) page.
+   ) from the [Releases](https://github.com/apti-jp/adstxt-inspector/releases/tag/latest-build) page.
 
 2. Unzip the file to a local directory.
 

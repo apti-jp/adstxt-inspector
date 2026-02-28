@@ -11,7 +11,7 @@ import { compareVersions, UpdateNotification } from './components/UpdateNotifica
 
 const logger = new Logger('sidepanel');
 
-const updateUrl = 'https://miyaichi.github.io/adstxt-Inspector/version.json';
+const updateUrl = 'https://apti-jp.github.io/adstxt-inspector/version.json';
 interface UpdateInfo {
   version: string;
   store_url: string;

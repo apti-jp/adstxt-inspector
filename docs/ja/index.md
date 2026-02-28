@@ -88,7 +88,7 @@ AdsTxt Inspectorは、プログラマティック広告の透明性とコンプ�
 
 ## インストール <a id="インストール"></a>
 
-1. [adstxt-inspector-build.zip](https://github.com/miyaichi/adstxt-Inspector/releases/tag/latest-build)をダウンロードします。
+1. [adstxt-inspector-build.zip](https://github.com/apti-jp/adstxt-inspector/releases/tag/latest-build)をダウンロードします。
 2. ローカルディレクトリに解凍します。
 3. `chrome://extensions/` を開きます。
 4. デベロッパーモードを有効にします。
@@ -118,11 +118,11 @@ AdsTxt Inspectorは、プログラマティック広告の透明性とコンプ�
 
 ## 貢献
 
-ソースコードは[GitHub](https://github.com/miyaichi/adstxt-Inspector)にあります。貢献を歓迎します！
+ソースコードは[GitHub](https://github.com/apti-jp/adstxt-inspector)にあります。貢献を歓迎します！
 
 ## サポート
 
-質問や提案、問題がある場合は、[こちら](https://github.com/miyaichi/adstxt-Inspector/issues) からお知らせください。
+質問や提案、問題がある場合は、[こちら](https://github.com/apti-jp/adstxt-inspector/issues) からお知らせください。
 
 ## 謝辞
 

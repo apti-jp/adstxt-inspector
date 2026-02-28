@@ -88,7 +88,7 @@ The extension provides three main views:
 
 ## Installation
 
-1. Download [adstxt-inspector-build.zip](https://github.com/miyaichi/adstxt-Inspector/releases/tag/latest-build)
+1. Download [adstxt-inspector-build.zip](https://github.com/apti-jp/adstxt-inspector/releases/tag/latest-build)
 2. Unzip to local directory
 3. Open `chrome://extensions/`
 4. Enable Developer Mode
@@ -118,11 +118,11 @@ The extension provides three main views:
 
 ## Contributing
 
-The source code is available on [GitHub](https://github.com/miyaichi/adstxt-Inspector). Contributions are welcome!
+The source code is available on [GitHub](https://github.com/apti-jp/adstxt-inspector). Contributions are welcome!
 
 ## Support
 
-If you have any questions, suggestions, or issues, please let us know [here](https://github.com/miyaichi/adstxt-Inspector/issues).
+If you have any questions, suggestions, or issues, please let us know [here](https://github.com/apti-jp/adstxt-inspector/issues).
 
 ## Acknowledgements
 

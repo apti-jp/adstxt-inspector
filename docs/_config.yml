@@ -4,15 +4,15 @@ remote_theme: pages-themes/cayman
 # Site settings
 title: AdsTxt Inspector
 description: Chrome extension for ads.txt and sellers.json validation
-baseurl: '/adstxt-Inspector'
-url: 'https://miyaichi.github.io'
+baseurl: '/adstxt-inspector'
+url: 'https://apti-jp.github.io'
 
 # GitHub settings
 github:
-  repository_url: https://github.com/miyaichi/adstxt-Inspector
+  repository_url: https://github.com/apti-jp/adstxt-inspector
   is_project_page: true
-  owner_url: https://github.com/miyaichi
-  owner_name: miyaichi
+  owner_url: https://github.com/apti-jp
+  owner_name: apti-jp
 
 # Theme settings
 show_downloads: true
